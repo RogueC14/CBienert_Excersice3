@@ -2,6 +2,8 @@
     --red: #950529;
     --yellow: #ffaf15;
     --blue: #1b185f;
+    --bkg: #dbdae2;
+    --frg: #1b185f;
 }
 
 /* -------------- */
@@ -17,6 +19,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    color: var(--bkg)
 }
 
 img {
@@ -45,6 +48,11 @@ footer {
     justify-content: space-between;
 }
 
+body {
+    background-color: var(--bkg);
+    color: var(--frg);
+}
+
 /* -------------- */
 /* buttons */
 /* -------------- */
@@ -56,9 +64,26 @@ footer {
 .button {
     display: inline-block;
     padding: 6px 10px;
-    border: 2px solid var(--blue);
-    color: var(--blue);
+    border: 2px solid var(--frg);
+    color: var(--frg);
     transition: background-color 0.3s;
+}
+
+.button:hover {
+    border: 5px solid var(--frg);
+    background-color: #484488;
+    color: var(--bkg);
+}
+
+.button.active {
+    background-color: var(--frg);
+    color: var(--bkg);
+}
+
+.title h1,
+.logos img,
+.funding h3 {
+    cursor: pointer;
 }
 
 /* -------------- */
@@ -90,6 +115,7 @@ figure {
     justify-content: center;
 }
 
+
 .type .letter-tiles {
     grid-gap: 0px;
     grid-template-columns: repeat(6, 120px);
@@ -103,18 +129,27 @@ figure {
     width: 120px;
     height: 120px;
     font-size: 14px;
+    /*flipping*/
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 }
 
-.type figcaption {
+.type figcaption,
+.type img {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*flipping*/
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .type figcaption {
-    display: none;
+    /*display: none;*/
+    transform: rotateY(180deg);
 }
 
 .type .top-terminal figcaption {

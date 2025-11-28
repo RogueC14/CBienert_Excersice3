@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niitsitapi - Abundant Intelligences</title>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=change_circle,grid_view" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=abc,change_circle,grid_view" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,12 +16,16 @@
             <h1>?</h1>
         </div>
         <div class="options">
-            <a href="#" class="button">
+            <a href="#" class="button active" id="-abc-y">
+                <span class="material-symbols-outlined">abc</span>
+            </a>
+            <a href="#" class="button" id="griddy">
                 <span class="material-symbols-outlined">grid_view</span>
             </a>
-            <a href="#" class="button">
+            <a href="#" class="button" id="colour-view">
                 <span class="material-symbols-outlined">change_circle</span>
             </a>
+
         </div>
     </header>
     <main>
@@ -129,7 +133,7 @@
             <h3>Funders</h3>
         </div>
         <div class="logos">
-            <img src="assets/abint-logo.svg" alt="Abundant Intelligences Logo">
+            <img id="logo" src="assets/abint-logo.svg" alt="Abundant Intelligences Logo">
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
